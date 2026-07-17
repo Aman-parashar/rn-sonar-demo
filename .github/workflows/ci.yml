@@ -26,7 +26,7 @@ jobs:
      run: npm run lint
 
    - name: SonarCloud Scan
-     uses: SonarSource/sonarcloud-github-action@v6
+     uses: SonarSource/sonarcloud-github-action@v8
      env: 
       SONAR_TOKAN: ${{ secrets.SONAR_TOKEN }}
 
