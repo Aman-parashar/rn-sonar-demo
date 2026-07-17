@@ -12,7 +12,7 @@ jobs:
 
   steps:
    - name: Checkout Repositary
-     run: actions/Checkout@v4
+     uses: actions/Checkout@v4
 
    - name: Show current directory
      run: pwd
