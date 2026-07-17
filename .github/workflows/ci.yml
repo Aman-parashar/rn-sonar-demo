@@ -25,6 +25,11 @@ jobs:
    - name: Linting Check
      run: npm run lint
 
+   - name: SonarCloud Scan
+     uses: SonarSource/sonarcloud-github-action@v6
+     env: 
+      SONAR_TOKAN: ${{ secrets.SONAR_TOKEN }}
+
    - name: Show current directory
      run: pwd
 
