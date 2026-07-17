@@ -14,7 +14,7 @@ import {
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
-  const unusedVariable = "I am not used";
+
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
