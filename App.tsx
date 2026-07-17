@@ -31,7 +31,7 @@ function App() {
     }
   }
 
-  badFunction(100);
+  badFunction(50);
 
   return (
     <SafeAreaProvider>
