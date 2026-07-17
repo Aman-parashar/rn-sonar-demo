@@ -14,7 +14,18 @@ import {
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
+  function sum1(a: number, b: number) {
+    let total = a + b;
+    console.log(total);
+    return total;
+  }
 
+  function sum2(a: number, b: number) {
+    let total = a + b;
+    console.log(total);
+    return total;
+  }
+  console.log(sum1, sum2)
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
