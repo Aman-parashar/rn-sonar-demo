@@ -14,18 +14,24 @@ import {
 
 function App() {
   const isDarkMode = useColorScheme() === 'dark';
-  function sum1(a: number, b: number) {
-    let total = a + b;
-    console.log(total);
-    return total;
+  function badFunction(value: number) {
+    try {
+      if (value > 0) {
+        if (value > 10) {
+          if (value > 20) {
+            if (value > 30) {
+              console.log("Very deep");
+            }
+          }
+        }
+      }
+    } catch (e) {
+      // intentionally empty
+    }
   }
 
-  function sum2(a: number, b: number) {
-    let total = a + b;
-    console.log(total);
-    return total;
-  }
-  console.log(sum1, sum2)
+  badFunction(100);
+
   return (
     <SafeAreaProvider>
       <StatusBar barStyle={isDarkMode ? 'light-content' : 'dark-content'} />
