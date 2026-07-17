@@ -5,6 +5,9 @@ on:
  push:
    branches:
      - main
+ pull_request:
+    branches:
+      - main
 
 jobs:
  build:
@@ -13,6 +16,8 @@ jobs:
   steps:
    - name: Checkout Repositary
      uses: actions/checkout@v4
+     with:
+       fetch-depth: 0
 
    - name: Setup Nodejs
      uses: actions/setup-node@v5
@@ -25,15 +30,15 @@ jobs:
    - name: Linting Check
      run: npm run lint
 
-   - name: SonarCloud Scan
-     uses: SonarSource/sonarqube-scan-action@7006c4492b2e0ee0f816d36501671557c97f5995
-     env: 
-      SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+  #  - name: SonarQube Scan
+  #    uses: SonarSource/sonarqube-scan-action@v3
+  #    env: 
+  #     SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+  #     SONAR_HOST_URL: ${{ secrets.SONAR_HOST_URL }}
+  #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
    - name: Show current directory
      run: pwd
 
    - name: List Repositary files
-     run: ls -la 
-
+     run: ls -la

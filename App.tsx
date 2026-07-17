@@ -30,8 +30,10 @@ function App() {
       // intentionally empty
     }
   }
+  const password = "123456";
+  console.log(password, "jsjsjsj")
 
-  badFunction(100);
+  badFunction(500);
 
   return (
     <SafeAreaProvider>
