@@ -10,19 +10,18 @@ jobs:
  build:
   runs-on: ubuntu-latest
 
+  steps:
+   - name: Checkout Repositary
+     run: actions/Checkout@v4
 
-steps:
- - name: Checkout Repositary
-   run: actions/Checkout@v4
+   - name: Show current directory
+     run: pwd
 
- - name: Show current directory
-   run: pwd
+   - name: List Repositary files
+     run: ls -la 
 
- - name: List Repositary files
-   run: ls -la 
+   - name: Show node version
+     run: node -v
 
- - name: Show node version
-   run: node -v
-
- - name: Show oprating system
-   run: uname -a
+   - name: Show oprating system
+     run: uname -a
