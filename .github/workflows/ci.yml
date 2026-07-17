@@ -11,10 +11,18 @@ jobs:
   runs-on: ubuntu-latest
 
 
-  steps:
-    - name: Checkout Repository
-      uses: actions/checkout@v4
+steps:
+ - name: Checkout Repositary
+   run: actions/Checkout@v4
 
-    - name: say hello
-      run: echo "Hello World"
-    
+ - name: Show current directory
+   run: pwd
+
+ - name: List Repositary files
+   run: ls -la 
+
+ - name: Show node version
+   run: node -v
+
+ - name: Show oprating system
+   run: uname -a
